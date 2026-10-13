@@ -72,8 +72,8 @@ body {
   font-family: Georgia, serif;
   font-size: 1.5rem;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 20vh auto 10vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -83,14 +83,14 @@ main {
   display: flex;
   flex-direction: column;
   border-radius: 0.8em;
-  gap: 1em;
+  gap: min(1em, 5%);
 }
 
 header, footer {
   font-family: 'Mileast', Georgia, serif;
   display: flex;
   align-items: center;
-  padding: 1em;
+  padding: min(1em, 5%);
   justify-content: space-between;
 
 }
@@ -292,9 +292,6 @@ footer li img {
   display: block;
   width: 3.5rem;
   height: auto;
-}
-
-.icons {
   filter: invert(100%);
 
 }
@@ -307,15 +304,21 @@ footer li img {
 *                                 *
 **********************************/
 @media screen and (min-width: 300px) and (max-width: 767px) {
+  main {
+    margin-left: 0;
+    margin-right: 0;
+    padding:0;
+  }
+
   header, footer{
     flex-direction: column;
   }
 
-  main {
+  main, footer {
     text-align: center;
   }
 
-  .text-with-picture {
+  .text-with-picture, footer {
     flex-direction: column-reverse;
     align-items: center;
   }
