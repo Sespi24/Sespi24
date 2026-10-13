@@ -64,6 +64,12 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   margin-left: 5%;
   margin-right: 5%;
@@ -71,9 +77,10 @@ body {
   color: var(--txt-color);
   font-family: Georgia, serif;
   font-size: 1.5rem;
-  height: 100vh;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 main {
@@ -216,6 +223,7 @@ li {
   object-fit: cover;
   width: 30vw;
   height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 0.8em;
   /* outline: 0.25em solid var(--nav-color); */
   border: 0.25em solid var(--secondary-color);
@@ -228,7 +236,7 @@ h2 {
   font-family: 'Gafiya Regular', Georgia, serif;
 }
 
-div {
+div > div{
   margin-bottom: 1.5em;
 }
 
@@ -272,6 +280,7 @@ main a:hover {
 **********************************/
 footer {
   align-items: center;
+  justify-self: flex-end;
   /* border-top: 0.25em solid var(--secondary-color);
   border-left: 0.15em solid var(--secondary-color);
   border-right: 0.15em solid var(--secondary-color);
