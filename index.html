@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script src="light-n-dark-mode.js"></script>
+    
     <header>
       <a href="./index.html"><h1>Seth Spickard</h1></a>
       <nav>
@@ -20,13 +22,14 @@
           <a href="./contact.html">
             <li>Contact</li>
           </a>
+          <button type="button" onclick="togglePreferredTheme();"></button>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="text-with-picture">
-        <div>
+        <section>
           <div>
             <h2>Hello!</h2>
             <h3> My name is Seth Spickard!</h3>
@@ -55,7 +58,7 @@
               Other Technical Skills: Linux, Vim, Git
             </p>
           </div>
-        </div>
+        </section>
 
         <img src="./images/headshot.jpg" alt="Headshot of Seth Spickard (how handsome!)"/>
       </section>

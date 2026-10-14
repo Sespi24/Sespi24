@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script src="light-n-dark-mode.js"></script>
+    
     <header>
       <a href="./index.html"><h1>Seth Spickard</h1></a>
       <nav>
@@ -20,6 +22,7 @@
           <a href="./contact.html">
             <li>Contact</li>
           </a>
+          <button type="button" onclick="togglePreferredTheme();"></button>
         </ul>
       </nav>
     </header>
@@ -28,47 +31,55 @@
       <h2>About Me</h2>
       
       <section>
-        <h3>Background</h3>
+        <h3 class="about_h3">Background</h3>
         <p>
           I was born in Fincastle, Virginia, a small town founded in 1772 which serves as the county seat to the historic, rural county of Botetourt. Throughout public school, I have always been drawn to mathematics and the STEM fields, but my experience at the <a href="https://btec.bcps.k12.va.us/">Botetourt Technical Education Center (BTEC)</a> revealed my particular love for computer science through building website and robotics projects. I further strengthened my love of learning at <a href="https://www.hsc.edu/">Hampden-Sydney College (H-SC)</a> where I built upon my computer science knowledge through ArcGIS, computer vision, and cybersecurity classes while broading my knowledge base in areas such as philosophy and rhetoric.
         </p>
       </section>
 
-      <section>
-        <h3>Hobbies</h3>
+      <section class="hobbies">
+        <h3 class="about_h3">Hobbies</h3>
 
-        <section>
+        <section class="hobby_group">
           <h4>DEBATE</h4>
-          <p>
-            While my high school did not have a debate team, H-SC was home to the oldest, continually-operating literary society in the United States, the <a href="https://en.wikipedia.org/wiki/Union-Philanthropic_Society">Union-Philanthropic Literary Society (UPLS)</a>. Started September 22nd, 1789, UPLS was founded to promote healthy conversation over controversal and casual topics alike through a formal weekly debate. I am proud to call myself a member of such a society.
-          </p>
+          <div class="hobby">
+            <p>
+              While my high school did not have a debate team, H-SC was home to the oldest, continually-operating literary society in the United States, the <a href="https://en.wikipedia.org/wiki/Union-Philanthropic_Society">Union-Philanthropic Literary Society (UPLS)</a>. Started September 22nd, 1789, UPLS was founded to promote healthy conversation over controversal and casual topics alike through a formal weekly debate. I am proud to call myself a member of such a society.
+            </p>
+          </div>
         </section>
 
-        <section>
+        <section class="hobby_group">
           <h4>MUSIC PERFORMANCE</h4>
-          <p>
-            My family used to joke that there wasn't a Spickard born without a musical bone in their body. This musical inclination was emphasized by music permiated any gatherings I attended throughout my childhood. There was pickin' 'n' grinin' (technical term) at family reunions, singing in the church choir on Sundays, and rocking out to 80s classics in the car. On these car rides, my dad would quiz me on the name of the song and the artist singing. After a while, I became adept at recognizing songs.
-          </p>
-          <p>
-            While I got fed up at learning scales on the piano in elementary school, I truly liked playing music in middle school band. I picked up the trombone and carried it through into high school where I joined the marching band. Senior year, I was one of two drum majors! Unforunately, H-SC did not have a pep band, but the student band scene was on the rise. So, I picked up the bass guitar, and some buddies from the literary society and I formed our very own bluegrass band: "Seth Spickard & The Fixins." We performed several times on stage, both during the Battle of the Bands competition and for the school's Bluegrass Festival. When we were not on stage playing big shindigs, we were on the porch of the UPLS house messing around and enjoying the joy of making music.
-          </p>
-          <p>
-            Alongside bluegrass, I was heavily involved with the H-SC Men's Chorus and The Acousticals, the H-SC a cappella group. The choir was under the direction of Dr. Helena von Rueden. Due to her instruction and guidance, my vocals improved dramatically. As for The Acousticals, I was honored to be their musical director for three years. Initially,  I was terrified. How does one come anywhere close to the type of direction that Dr. von Rueden provided, let alone lead a singing essemble to begin with? Through my leadership experience in marching band and talks with Dr. von Rueden, The Acousticals were able to perform and expanded over my three years directing. We went from performing once to a meager audience on campus to performing a few times each semester in the surrounding Prince Edward community.
-          </p>
+          <div class="hobby">
+            <p>
+              My family used to joke that there wasn't a Spickard born without a musical bone in their body. This musical inclination was emphasized by music permiated any gatherings I attended throughout my childhood. There was pickin' 'n' grinin' (technical term) at family reunions, singing in the church choir on Sundays, and rocking out to 80s classics in the car. On these car rides, my dad would quiz me on the name of the song and the artist singing. After a while, I became adept at recognizing songs.
+            </p>
+            <p>
+              While I got fed up at learning scales on the piano in elementary school, I truly liked playing music in middle school band. I picked up the trombone and carried it through into high school where I joined the marching band. Senior year, I was one of two drum majors! Unforunately, H-SC did not have a pep band, but the student band scene was on the rise. So, I picked up the bass guitar, and some buddies from the literary society and I formed our very own bluegrass band: "Seth Spickard & The Fixins." We performed several times on stage, both during the Battle of the Bands competition and for the school's Bluegrass Festival. When we were not on stage playing big shindigs, we were on the porch of the UPLS house messing around and enjoying the joy of making music.
+            </p>
+            <p>
+              Alongside bluegrass, I was heavily involved with the H-SC Men's Chorus and The Acousticals, the H-SC a cappella group. The choir was under the direction of Dr. Helena von Rueden. Due to her instruction and guidance, my vocals improved dramatically. As for The Acousticals, I was honored to be their musical director for three years. Initially,  I was terrified. How does one come anywhere close to the type of direction that Dr. von Rueden provided, let alone lead a singing essemble to begin with? Through my leadership experience in marching band and talks with Dr. von Rueden, The Acousticals were able to perform and expanded over my three years directing. We went from performing once to a meager audience on campus to performing a few times each semester in the surrounding Prince Edward community.
+            </p>
+          </div>
         </section>
 
-        <section>
+        <section class="hobby_group">
           <h4>BEEKEEPING</h4>
-          <p>
-            In elementary school, my dad wanted my younger brother and I to be active and explore a lot of different extracurricular activities. The one that really stuck was beekeeping. I have kept bees for a bit over eleven years now and have come to appreciate not only the colonies I raised but also the act of raising livestock in general. (Yes, bees are considered livestock even though they are not seen as domesticated.) 
-          </p>
+          <div class="hobby">
+            <p>
+              In elementary school, my dad wanted my younger brother and I to be active and explore a lot of different extracurricular activities. The one that really stuck was beekeeping. I have kept bees for a bit over eleven years now and have come to appreciate not only the colonies I raised but also the act of raising livestock in general. (Yes, bees are considered livestock even though they are not seen as domesticated.) 
+            </p>
+          </div>
         </section>
 
-        <section>
+        <section class="hobby_group">
           <h4>EXERCISE/CROSSFIT</h4>
-          <p>
+          <div>
+            <p>
 
-          </p>
+            </p>
+          </div>
         </section>
       </section>
     </main>

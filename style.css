@@ -1,26 +1,37 @@
 /**********************************
 *                                 *
-*   VARIABLES                     *
+*   COLORS                        *
 *                                 *
 **********************************/
 
-:root {
+:root[data-theme="light"]{
   --nav-txt: wheat;
   --primary-color: wheat;
   --secondary-color: saddlebrown;
   --accent-color: firebrick;
   --txt-color: rgb(75, 40, 15);
+
+  & img[src$=".svg"] {
+    filter: invert(14%) sepia(84%) saturate(499%) hue-rotate(344deg) brightness(96%) contrast(94%);
+  }
+
+  & footer li:hover {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(47%) saturate(612%) hue-rotate(310deg) brightness(102%) contrast(92%);
+  }
 } 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --nav-txt: white;
-    --primary-color: rgb(56, 70, 82);
-    --secondary-color: rgb(60, 100, 150);
-    --accent-color: lightskyblue;
-    --txt-color:white;
+:root[data-theme="dark"] {
+  --nav-txt: white;
+  --primary-color: rgb(56, 70, 82);
+  --secondary-color: rgb(60, 100, 150);
+  --accent-color: lightskyblue;
+  --txt-color:white;
+
+  & img[src$=".svg"] {
+    filter: invert(100%);
   }
 }
+
 
 
 /**********************************
@@ -297,21 +308,6 @@ footer li img {
   display: block;
   width: 3.5rem;
   height: auto;
-  filter: invert(14%) sepia(84%) saturate(499%) hue-rotate(344deg) brightness(96%) contrast(94%);
-}
-
-footer li:hover {
-  filter: brightness(0) saturate(100%) invert(94%) sepia(47%) saturate(612%) hue-rotate(310deg) brightness(102%) contrast(92%);
-}
-
-@media (prefers-color-scheme: dark) {
-  footer li img {
-    filter: invert(100%);
-  }
-  
-  footer li:hover {
-    filter: invert(0%);
-  }
 }
 
 
