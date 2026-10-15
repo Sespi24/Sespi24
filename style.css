@@ -15,7 +15,7 @@
     filter: invert(14%) sepia(84%) saturate(499%) hue-rotate(344deg) brightness(96%) contrast(94%);
   }
 
-  & footer li:hover {
+  & footer li:hover, button img:hover {
     filter: brightness(0) saturate(100%) invert(94%) sepia(47%) saturate(612%) hue-rotate(310deg) brightness(102%) contrast(92%);
   }
 } 
@@ -89,6 +89,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.6s;
 }
 
 main {
@@ -195,13 +196,6 @@ textarea {
 *   WITHIN HEADER/NAVBAR          *
 *                                 *
 **********************************/
-/* header {
-  border-bottom: 0.25em solid var(--secondary-color);
-  border-left: 0.15em solid var(--secondary-color);
-  border-right: 0.15em solid var(--secondary-color);
-  border-radius: 0 0 0.8em 0.8em;
-} */
-
 ul {
   display: flex;
   padding: 1rem;
@@ -214,6 +208,19 @@ li {
   padding: 1rem;
   font-size: 1.25em;
 }
+
+#themePreferenceButton {
+  background-color: var(--primary-color);
+}
+
+#themePreferenceButton:hover {
+  background-color: var(--secondary-color);
+}
+
+#themePreferenceIcon {
+  width: 2rem;
+}
+
 
 
 /**********************************
@@ -256,12 +263,6 @@ p {
   margin-bottom: 0.5em;
 }
 
-hr {
-  border: 0;
-  height: 0.1em;
-  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
-}  
-
 main a:link, main a:visited {
   color: var(--txt-color);
   text-decoration: underline;
@@ -274,8 +275,6 @@ main a:hover {
   background-color: var(--txt-color);
   text-decoration: underline;
   border-radius: 0.2em;
-  /* padding-left: 0.25em;
-  padding-right: 0.25em; */
 }
 
 
@@ -288,10 +287,6 @@ main a:hover {
 footer {
   align-items: center;
   justify-self: flex-end;
-  /* border-top: 0.25em solid var(--secondary-color);
-  border-left: 0.15em solid var(--secondary-color);
-  border-right: 0.15em solid var(--secondary-color);
-  border-radius: 0.8em 0.8em 0 0; */
 }
 
 footer ul {
@@ -299,16 +294,22 @@ footer ul {
   align-items: center;
 }
 
+.icon {
+  display: block;
+  width: 3.5rem;
+  height: auto;
+}
+
 footer li {
   padding: 0.75rem;
   font-size: 1em;
 }
 
-footer li img {
+/* footer li img {
   display: block;
   width: 3.5rem;
   height: auto;
-}
+}  */
 
 
 
@@ -344,7 +345,7 @@ footer li img {
 *   MOBILE RESPONSIVENESS         *
 *                                 *
 **********************************/
-@media screen and (min-width: 300px) and (max-width: 767px) {
+@media screen and (min-width: 300px) and (max-width: 900px) {
   main {
     margin-left: 0;
     margin-right: 0;
