@@ -1,5 +1,10 @@
 ## Hi there 👋
 
+My name is Seth Spickard!
+I graduted with a double major in Computer Science and Applied Mathematics from Hampden-Sydney College in May of 2026.
+
+I am currently looking for an entry-level position as a cybersecurity consultant.
+
 <!--
 **Sespi24/Sespi24** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
