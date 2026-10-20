@@ -16,7 +16,7 @@
   }
 
   & footer li:hover, button img:hover {
-    filter: brightness(0) saturate(100%) invert(94%) sepia(47%) saturate(612%) hue-rotate(310deg) brightness(102%) contrast(92%);
+    filter: brightness(0) saturate(100%) invert(94%) sepia(47%) saturate(612%) hue-rotate(310deg) brightness(102%) contrast(92%); 
   }
 } 
 
@@ -114,6 +114,17 @@ header, footer {
 h1 {
   font-family: 'Agraham', Georgia, serif;
   font-size: 1em;
+}
+
+.row {
+  display:flex;
+  align-items: baseline;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -219,6 +230,13 @@ li {
 
 #themePreferenceIcon {
   width: 2rem;
+  transition: 0.6s;
+
+}
+
+#themePreferenceIcon:active {
+  transition: 0.6s;
+  rotate: X 360deg;
 }
 
 
@@ -234,7 +252,7 @@ li {
   gap: 3rem;
 }
 
-.text-with-picture img {
+.text-with-picture img, .text-with-picture iframe {
   object-fit: cover;
   width: 30vw;
   height: auto;
@@ -275,6 +293,70 @@ main a:hover {
   background-color: var(--txt-color);
   text-decoration: underline;
   border-radius: 0.2em;
+}
+
+
+
+/**********************************
+*                                 *
+*   PROJECTS                      *
+*                                 *
+**********************************/
+.project-container {
+  border: 0.25em solid var(--secondary-color);
+  padding: 1em;
+  border-radius: 0.8em;
+  background-color: var(--secondary-color);
+  color:var(--primary-color);
+  margin-bottom: 1em;
+  transition: 0.6s;
+}
+
+.project-container:hover {
+  transform: translateY(-0.15em);
+  transition: 0.6s;
+}
+
+.project-container:hover .language-skill {
+  animation: hop 0.6s ease;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes hop {
+ 0% {transform: translateY(0em);}
+ 50% {transform: translateY(-0.15em);}
+ 100% {transform: translateY(0em);}
+}
+
+.dot {
+  height: clamp(10px, 1vw, 20px);
+  width: clamp(10px, 1vw, 20px);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display:inline-block;
+}
+
+.language-skill {
+  background-color: var(--primary-color);
+  color:var(--secondary-color);
+  padding:0.5em;
+  margin-right:0.5em;
+  margin-bottom: 0;
+  border-radius:0.8em;
+}
+
+.language-skill p {
+  margin-bottom:0;
+  margin-left:0;
+}
+
+.language-skills {
+  margin:0;
+  flex-wrap: wrap; 
+}
+
+.project-name {
+  color: var(--primary-color) !important; 
 }
 
 
@@ -322,6 +404,45 @@ footer li {
   justify-self: center;
 }
 
+#map {
+  height: 100%;
+}
+
+iframe {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+.trigger-text:hover iframe {
+  opacity: 1;
+  height: auto;
+  transition: 0.6s;
+}
+
+#debate {
+  background-image: url("./images/");
+}
+
+#music {
+  background-image: url("./images/music-bg.jpg");
+  background-size:20em;
+  object-fit: cover;
+  aspect-ratio: 16 /9;
+  /* opacity:0.5; */
+}
+
+#beekeeping {
+  background-image: url('./images/beekeeping-bg.JPEG');
+  object-fit: scale-down;
+  /* opacity:0.5; */
+}
+
+#crossfit {
+  background-image: url();
+}
 
 /* .hobbies {
   justify-content: space-between;
@@ -367,5 +488,10 @@ footer li {
 
   .text-with-picture img {
     width: 50vw;
+  }
+
+  .language-skills {
+    justify-content: center;
+    gap: 0.5em;
   }
 }
